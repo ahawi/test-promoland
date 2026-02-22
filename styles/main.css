@@ -1,0 +1,61 @@
+h1 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  color: inherit
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #474343;
+  background: #fff;
+  font-size: 16px;
+  min-height: 100vh;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.screen .container {
+  padding: 30px 15px;
+}
+
+.screen {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .screen .container {
+    padding: 15px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}

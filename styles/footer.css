@@ -1,0 +1,9 @@
+.footer {
+  border-top: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+}
+
+.footer__title .accent {
+  color: #de3f3f;
+}

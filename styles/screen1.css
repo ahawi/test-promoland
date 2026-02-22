@@ -1,0 +1,163 @@
+.screen-1__content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.screen-1__title {
+  margin-bottom: 30px;
+}
+
+.screen-1__product {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.screen-1__product-image {
+  width: 100%;
+  aspect-ratio: 12 / 7;
+  object-fit: contain;
+  border-radius: 10px;
+  max-width: 800px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.screen-1__product-image.fade-out {
+  opacity: 0;
+}
+
+.screen-1__desc {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.product__info {
+  flex: 1;
+}
+
+.screen-1__main-desc {
+  width: 100%;
+}
+
+.screen-1__timer {
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.screen-1__quiz {
+  background: #fafafa;
+  padding: 15px 10px;
+  border-radius: 8px;
+}
+
+.screen-1__question {
+  margin-block: 0 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.screen-1__answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.screen-1__answers button:hover {
+  background-color: #eee;
+  opacity: 0.8;
+}
+
+.screen-1__answers button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.screen-1__answers button.active {
+  border-color: #de3f3f;
+  background-color: #de3f3f;
+  color: #fff;
+}
+
+.screen-1__quiz-controls {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.screen-1__quiz-button {
+  background: none;
+  padding: 5px 15px;
+  border-radius: 30px;
+  border: 2px solid #de3f3f;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.8rem;
+}
+
+.screen-1__quiz-button:hover {
+  background-color: #de3f3f;
+  color: #fff;
+}
+
+.screen-1__quiz-button:active {
+  opacity: 0.7;
+}
+
+.screen-1__quiz-button:disabled {
+  border-color: #eee;
+  pointer-events: none;
+}
+
+.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .screen-1__quiz-button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .screen .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen-1__content {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .screen-1__main-desc {
+    max-width: 50%;
+  }
+
+  .screen-1__title {
+    margin-bottom: 50px;
+  }
+}
+
+@media (hover: none) {
+  .screen-1__quiz-button:hover {
+    background-color: #fff;
+    color: inherit;
+  }
+
+  .screen-1__quiz-button:active {
+    background-color: #de3f3f;
+    color: #fff;
+  }
+}

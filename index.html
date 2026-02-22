@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
+    <title>Промо-лендинг</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/screen1.css" />
+    <link rel="stylesheet" href="styles/screen2.css" />
+    <link rel="stylesheet" href="styles/screen3.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="preload" as="image" href="images/nintendo-main.png" />
+  </head>
+
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="container">
+        <a href="" class="header__logo" data-js-logo>
+          Geek
+          <span class="accent">S</span>
+        </a>
+        <button type="button" class="header__button" data-js-other-img-button>Другая картинка</button>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <main id="main">
+      <!-- screen1 start -->
+      <section class="screen active">
+        <div class="container">
+          <h1 class="screen-1__title fade-item" data-js-product-title></h1>
+          <div class="screen-1__content fade-item">
+            <div class="screen-1__product">
+              <img class="screen-1__product-image" src="images/nintendo-main.png" alt="" data-js-product-image />
+            </div>
+            <div class="screen-1__main-desc">
+              <div class="screen-1__product-info">
+                <p class="screen-1__desc" data-js-product-desc></p>
+              </div>
+              <div class="screen-1__timer" aria-atomic="true">
+                Осталось:
+                <span data-js-timer>02:00</span>
+              </div>
+              <div class="screen-1__quiz">
+                <p class="screen-1__question" data-js-quiz-question></p>
+                <div class="screen-1__answers" data-js-quiz-answers></div>
+                <div class="screen-1__quiz-controls">
+                  <button type="button" class="screen-1__quiz-button" data-js-quiz-button disabled>Дальше</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- screen1 end -->
+
+      <!-- screen2 start -->
+      <section class="screen">
+        <div class="container screen-2__loader fade-item">
+          <div class="screen-2__loader-wheel" aria-hidden="true"></div>
+          <div class="screen-2__analysis-text" data-js-analysis>
+            <p data-js-analysis-line>Сканируем полученные ответы...</p>
+            <p data-js-analysis-line>Определяем идеальную конфигурацию консоли...</p>
+            <p data-js-analysis-line>Подбираем лучшее предложение Nintendo Switch...</p>
+          </div>
+        </div>
+      </section>
+      <!-- screen2 end -->
+
+      <!-- screen3 start -->
+      <section class="screen">
+        <div class="container">
+          <h1 class="screen-3__title fade-item" data-js-final-title></h1>
+          <div class="screen-3__content">
+            <div class="screen-3__product fade-item">
+              <img class="screen-3__image" src="images/nintendo-main.png" alt="" loading="lazy" data-js-final-image />
+              <div class="screen-3__body">
+                <p data-js-final-desc></p>
+              </div>
+            </div>
+
+            <form class="screen-3__form fade-item" data-js-form novalidate>
+              <h2 class="screen-3__form-title">Заполните форму, чтобы получить свой приз!</h2>
+              <div class="screen-3__form-row">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Имя"
+                  required
+                  maxlength="50"
+                  aria-label="Имя"
+                  data-js-form-name
+                />
+                <input
+                  type="text"
+                  id="surname"
+                  name="surname"
+                  placeholder="Фамилия"
+                  maxlength="50"
+                  aria-label="Фамилия"
+                  data-js-form-surname
+                  required
+                />
+              </div>
+              <div class="screen-3__form-row screen-3__form-phone-row">
+                <div class="screen-3__form-country-wrapper">
+                  <select
+                    class="screen-3__form-country"
+                    id="country"
+                    aria-label="Код страны"
+                    data-js-form-country
+                  ></select>
+                </div>
+                <input
+                  type="tel"
+                  inputmode="numeric"
+                  id="phone"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  aria-label="Номер телефона"
+                  data-js-form-phone
+                  required
+                />
+              </div>
+              <div class="screen-3__form-row">
+                <input
+                  type="email"
+                  inputmode="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  maxlength="99"
+                  aria-label="Email"
+                  required
+                  data-js-form-email
+                />
+              </div>
+              <div class="screen-3__form-row">
+                <button type="submit" class="screen-3__form-button">Отправить</button>
+              </div>
+              <div class="screen-3__form-alert" aria-live="polite" data-js-form-alert></div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- screen3 end -->
+    </main>
+
+    <!-- footer start -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__title">
+          © Geek
+          <span class="accent">S</span>
+        </p>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="scripts/screen1.js" defer></script>
+    <script src="scripts/screen3.js" defer></script>
+  </body>
+</html>

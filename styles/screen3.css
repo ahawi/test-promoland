@@ -1,0 +1,153 @@
+.screen-3__title {
+  margin-bottom: 20px;
+}
+
+.screen-3__product {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  align-items: start;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.screen-3__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-3__image {
+  width: 100%;
+  aspect-ratio: 12 / 7;
+  object-fit: contain;
+  max-width: 700px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.screen-3__body {
+  flex: 1;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.screen-3__form {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.screen-3__form-title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.screen-3__form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.screen-3__form-phone-row {
+  flex-direction: row;
+}
+
+.screen-3__form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline-color: #de3f3f;
+}
+
+.screen-3__form-country-wrapper {
+  position: relative;
+}
+
+.screen-3__form-country-wrapper select {
+  width: 100%;
+  padding: 10px 20px 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+  outline-color: #de3f3f;
+  color: #474343;
+}
+
+.screen-3__form-country-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/select.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.screen-3__form-button {
+  border: 2px solid #de3f3f;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #de3f3f;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.screen-3__form-button:hover {
+  opacity: 0.7;
+}
+
+.screen-3__form-button:active {
+  opacity: 1;
+}
+
+.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 1025px) {
+  .screen-3__product {
+    flex-direction: column;
+    max-width: 70%;
+  }
+
+  .screen-3__content {
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+  }
+
+  .screen-3__form {
+    max-width: 30%;
+  }
+}
+
+@media (hover: none) {
+  .screen-3__form-button:hover {
+    opacity: 1;
+  }
+
+  .screen-3__form-button:active {
+    opacity: 0.7;
+  }
+}
