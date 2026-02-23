@@ -56,7 +56,9 @@ const detectUserCountry = async () => {
       countrySelect.value = userCountry
       detectedCountry = userCountry
     }
-  } catch {}
+  } catch (e) {
+    console.error('Ошибка загрузки местоположения', e)
+  }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
